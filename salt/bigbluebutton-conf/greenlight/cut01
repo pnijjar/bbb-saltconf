@@ -1,0 +1,2 @@
+{% set bbb_endpoint = salt['cmd.shell'](cmd="echo '" ~ bbb_out ~ "' | grep -oP 'URL: \K[^ ]+'") %}
+{% set bbb_secret = salt['cmd.run'](python_shell=True, cmd="echo " ~ bbb_out ~ " | grep -oP 'Secret: \K[^ ]+'") %}

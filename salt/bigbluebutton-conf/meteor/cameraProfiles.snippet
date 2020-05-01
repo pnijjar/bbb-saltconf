@@ -1,0 +1,17 @@
+    cameraProfiles: # set by salt
+    - id: low
+      name: Low quality
+      default: true    # changed manually. Shoot me.
+      bitrate: {{ bitrates['low'] }}
+    - id: medium
+      name: Medium quality
+      default: false   # changed manually. Shoot me.
+      bitrate: {{ bitrates['medium'] }}
+    - id: high
+      name: High quality
+      default: false
+      bitrate: {{ bitrates['high'] }}
+    - id: hd
+      name: High definition
+      default: false
+      bitrate: {{ bitrates['hd'] }}

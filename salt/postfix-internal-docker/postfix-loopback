@@ -1,0 +1,5 @@
+# This is so docker containers can send mail (maybe)
+auto lo:{{ p['alias_num'] }}
+    iface lo:{{ p['alias_num'] }} inet static
+    address {{ p['alias_ip'] }}
+    netmask 255.255.255.255

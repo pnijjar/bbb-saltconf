@@ -1,0 +1,15 @@
+# Managed by salt. Do not edit manually!
+[Unit]
+Description=Greenlight BigBlueButton frontend
+Requires=docker.service
+After=network.target docker.service
+
+[Service]
+Restart=always
+Type=simple
+WorkingDirectory={{ conf['basedir'] }} 
+ExecStart=/usr/local/bin/docker-compose -f {{ conf['basedir'] }}/docker-compose.yml up
+ExecStop=/usr/local/bin/docker-compose -f {{ conf['basedir'] }}/docker-compose.yml down
+
+[Install]
+WantedBy=multi-user.target

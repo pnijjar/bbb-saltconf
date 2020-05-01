@@ -1,0 +1,5 @@
+stunServerAddress={{ c['stun_server']['ip'] }}
+stunServerPort={{ c['stun_server']['port'] }}
+
+{% set t = c['turn_server'] %}
+;;turnURL={{ t['user'] }}:{{ t['password'] }}@{{ t['ip'] }}:{{ t['port'] }}?transport=udp

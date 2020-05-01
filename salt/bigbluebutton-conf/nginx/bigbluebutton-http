@@ -1,0 +1,9 @@
+# Redirect http to https
+# Controlled by Salt! Do not modify directly!
+server { 
+  listen 80;
+  listen [::]:80;
+  server_name {{ servername }};
+
+  return 301 https://$server_name$request_uri;
+}

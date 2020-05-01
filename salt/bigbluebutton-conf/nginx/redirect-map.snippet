@@ -1,0 +1,6 @@
+map $request_uri $redirect_uri { 
+{% for req in redirect_dict %}
+    /room/{{ req }}    /b/{{ redirect_dict[req] }};
+    /rooms/{{ req }}    /b/{{ redirect_dict[req] }};
+{% endfor %}
+} 

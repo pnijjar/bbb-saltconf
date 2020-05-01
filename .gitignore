@@ -1,0 +1,10 @@
+pillar/secrets/*
+!pillar/secrets/*.example
+.*.swp
+salt/secrets/*
+!salt/secrets/backupmeister/
+salt/secrets/backupmeister/*
+!salt/secrets/backupmeister/authorized_keys.example
+!salt/secrets/apache-certs/README
+!salt/secrets/elkstack/README
+salt/win/repo-ng/salt-winrepo-ng

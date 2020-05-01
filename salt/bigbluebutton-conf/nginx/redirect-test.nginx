@@ -1,0 +1,5 @@
+# From https://www.bjornjohansen.com/nginx-redirect
+
+if ( $redirect_uri ) {
+    return 301 $redirect_uri;
+}
